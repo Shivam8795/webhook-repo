@@ -1,0 +1,10 @@
+import stripe
+stripe.api_key = "pk_test_TYooMQauvdEDq54NiTphI7jx"
+
+stripe.WebhookEndpoint.create(
+  url="https://webhook.site/5ae61ad3-cf23-4fb5-bfb2-7b2161bfd9b3/webhook/endpoint",
+  enabled_events=[
+    "charge.failed",
+    "charge.succeeded",
+  ],
+)
